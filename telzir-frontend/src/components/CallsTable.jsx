@@ -9,8 +9,7 @@ export default function CallsTable({ data }) {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Origem</th>
-            <th scope="col">Destino</th>
+            <th scope="col">Origem Destino</th>
             <th scope="col">Tempo</th>
             <th scope="col">Plano FaleMais</th>
           </tr>
@@ -19,8 +18,7 @@ export default function CallsTable({ data }) {
           { data.length ? data.map((call, index) => (
             <tr>
               <td>{index + 1}</td>
-              <td>{call.origin}</td>
-              <td>{call.destiny}</td>
+              <td>{call.oriDest}</td>
               <td>{call.min}</td>
               <td>{call.plan}</td>
             </tr>
