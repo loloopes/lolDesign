@@ -7,6 +7,7 @@ import Modal from '../components/Modal';
 import LabelInput from '../components/LabelInput';
 import Select from '../components/Select';
 import ResultsTable from '../components/ResultsTable';
+import postData from '../service/postData';
 
 import phoneBook from '../service/PhoneBook';
 import contract from '../service/Planos';
@@ -31,7 +32,7 @@ export default function CalculatorPage() {
             <div className="card-body">
               <h5 className="card-title">Info da ligacao</h5>
               <LabelInput entity="Tempo" text="Tempo" handleChange={setMin} />
-              <Select tag="origem" data={phoneBook} handleChange={setOriDest} />
+              <Select tag="origem destino" data={phoneBook} handleChange={setOriDest} />
               <Select tag="plano" data={contract} handleChange={setPlan} />
             </div>
             <section className="btns">
@@ -44,7 +45,13 @@ export default function CalculatorPage() {
               >
                 Adicionar
               </button>
-              <button type="button" className="btn btn-primary">Calcular</button>
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={() => postData(calls)}
+              >
+                Calcular
+              </button>
               <button
                 type="button"
                 className="btn btn-warning"

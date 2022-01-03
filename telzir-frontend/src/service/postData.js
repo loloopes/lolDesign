@@ -1,10 +1,10 @@
-import axios from 'axios';
+// import axios from 'axios';
 
 export default async function postData(info) {
   try {
-    const result = await axios.post(URL, info);
+    // const result = await axios.post(URL, info);
 
-    console.log(result);
+    console.log(info);
   } catch (err) {
     console.log(err);
   }
