@@ -18,12 +18,13 @@ export default function CalculatorPage() {
   const [plan, setPlan] = useState('');
 
   const [calls, setCalls] = useState([]);
+  const [result, setResult] = useState({});
 
   return (
     <div>
       <div className="tablesContainer">
         <CallsTable data={calls} />
-        <ResultsTable />
+        <ResultsTable data={result} />
       </div>
       <div>
         <form className="form">
@@ -48,7 +49,7 @@ export default function CalculatorPage() {
               <button
                 type="button"
                 className="btn btn-primary"
-                onClick={() => postData(calls)}
+                onClick={() => postData(calls, setResult)}
               >
                 Calcular
               </button>

@@ -1,7 +1,8 @@
 /* eslint-disable react/function-component-definition */
+import PropTypes from 'prop-types';
 import React from 'react';
 
-export default function ResultsTable() {
+export default function ResultsTable({ data: { withContract, withoutContract } }) {
   return (
     <div>
       <table className="table">
@@ -13,13 +14,24 @@ export default function ResultsTable() {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          { withContract ? withContract.map((callRes, index) => (
+            <tr>
+              <td>{index + 1}</td>
+              <td>{callRes}</td>
+              <td>{withoutContract[index]}</td>
+            </tr>
+          )) : null}
+          {/* <tr>
             <td>#</td>
             <td>Mock1</td>
             <td>Mock2</td>
-          </tr>
+          </tr> */}
         </tbody>
       </table>
     </div>
   );
 }
+
+ResultsTable.propTypes = {
+  data: PropTypes.object,
+}.isRequired;

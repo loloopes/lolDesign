@@ -1,10 +1,10 @@
-// import axios from 'axios';
+import axios from 'axios';
 
-export default async function postData(info) {
+export default async function postData(calls, setResult) {
   try {
-    // const result = await axios.post(URL, info);
+    const { data: { withContract, withoutContract } } = await axios.post('http://localhost:3001/calculator', calls);
 
-    console.log(info);
+    setResult({ withContract, withoutContract });
   } catch (err) {
     console.log(err);
   }
