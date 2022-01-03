@@ -21,11 +21,6 @@ export default function ResultsTable({ data: { withContract, withoutContract } }
               <td>{withoutContract[index]}</td>
             </tr>
           )) : null}
-          {/* <tr>
-            <td>#</td>
-            <td>Mock1</td>
-            <td>Mock2</td>
-          </tr> */}
         </tbody>
       </table>
     </div>

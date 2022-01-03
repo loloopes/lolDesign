@@ -20,7 +20,7 @@ export default function CallsTable({ data }) {
               <td>{index + 1}</td>
               <td>{call.oriDest}</td>
               <td>{call.min}</td>
-              <td>{call.plan}</td>
+              <td>{call.contract}</td>
             </tr>
           )) : null}
         </tbody>
