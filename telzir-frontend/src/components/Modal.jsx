@@ -15,7 +15,7 @@ export default function Modal() {
           <div className="modal-body">
             <ol>
               <li>
-                Modal
+                Campo Tempo deve ser um numero (mesmo que 0), sem simbolos.
               </li>
             </ol>
           </div>

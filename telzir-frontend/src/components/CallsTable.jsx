@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default function CallsTable({ data }) {
   return (
     <div className="tablesContainer">
-      <table className="table">
+      <table data-testid="callsTable" className="table">
         <thead>
           <tr>
             <th scope="col">#</th>
