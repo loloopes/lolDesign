@@ -15,14 +15,14 @@ export default function CallsTable({ data }) {
           </tr>
         </thead>
         <tbody>
-          { data.length ? data.map((call, index) => (
+          { data && data.map((call, index) => (
             <tr>
               <td>{index + 1}</td>
               <td>{call.oriDest}</td>
               <td>{call.min}</td>
               <td>{call.contract}</td>
             </tr>
-          )) : null}
+          ))}
         </tbody>
       </table>
     </div>
