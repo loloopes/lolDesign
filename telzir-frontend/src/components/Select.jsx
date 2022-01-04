@@ -10,7 +10,7 @@ export default function Select({
       <div className="input-group-prepend">
         <span className="input-group-text">{tag}</span>
       </div>
-      <select className="custom-select" id={id} onChange={({ target: { value } }) => handleChange(value)}>
+      <select data-testid={id} className="custom-select" id={id} onChange={({ target: { value } }) => handleChange(value)}>
         { data
           ? data.map((code) => <option value={code}>{code}</option>) : <option>Loading...</option> }
       </select>

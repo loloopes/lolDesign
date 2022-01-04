@@ -1,3 +1,3 @@
-const contracts = ['FaleMais30', 'Falemais60', 'FaleMais120'];
+const contracts = ['FaleMais30', 'FaleMais60', 'FaleMais120'];
 
 export default contracts;

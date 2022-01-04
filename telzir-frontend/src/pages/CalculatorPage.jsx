@@ -32,13 +32,14 @@ export default function CalculatorPage() {
             <Modal />
             <div className="card-body">
               <h5 className="card-title">Info da ligacao</h5>
-              <LabelInput entity="Tempo" text="Tempo" handleChange={setMin} />
+              <LabelInput entity="Tempo" handleChange={setMin} />
               <Select tag="origem destino" data={phoneBook} handleChange={setOriDest} id="oriDes" />
               <Select tag="plano" data={contracts} handleChange={setContract} id="contracts" />
             </div>
             <section className="btns">
               <button
                 type="button"
+                data-testid="add"
                 className="btn btn-primary"
                 onClick={() => setCalls([...calls, {
                   min, oriDest, contract,
