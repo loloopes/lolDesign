@@ -14,13 +14,13 @@ export default function ResultsTable({ data: { withContract, withoutContract } }
           </tr>
         </thead>
         <tbody>
-          { withContract ? withContract.map((callRes, index) => (
+          { withContract && withContract.map((callRes, index) => (
             <tr>
               <td>{index + 1}</td>
               <td>{callRes}</td>
               <td>{withoutContract[index]}</td>
             </tr>
-          )) : null}
+          ))}
         </tbody>
       </table>
     </div>
