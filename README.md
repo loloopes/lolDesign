@@ -35,26 +35,24 @@ O FrontEnd, que vai rodar em `http://localhost:3000/calculator`, consiste de dua
 
 ### Docker Compose 
 
-Rode o comando:
+Rode o comando na raiz do projeto:
 
 ```bash
-cd codechallenge
 docker-compose up
 ```
-Apos entrar com docker-compose up a aplicacao vai estar no ar e pronta para uso em `http://localhost:3000/`.
+Apos entrar com docker-compose up a aplicacao vai estar no ar e pronta para uso em `http://localhost:3000/calculator`.
 
 ### Rodando sem o Docker Compose
 
 Instale as dependencias tanto no diretorio front-end quanto back-end, para isso entre os seguintes comandos:
 
 ```bash
-cd codechallenge
-cd back-end
+cd telzir-backend
 npm install
-cd ..
+
 cd front-end
 npm install
 ```
 Apos instaladas as dependencias voce devera rodar `npm start` tanto no diretorio back-end quanto front-end para que o aplicativo funcione na sua totalidade.
 
-Depois de iniciado a aplicacao esta pronta para uso em `http://localhost:3000/`.
+Depois de iniciado a aplicacao esta pronta para uso em `http://localhost:3000/calculator`.
