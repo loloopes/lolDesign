@@ -1,0 +1,12 @@
+version: "3"
+services:
+  front:
+    build: ./telzir-frontend
+    depends_on: 
+      - "back"
+    ports:
+      - 3000:3000
+  back:
+    build: ./telzir-backend
+    ports:
+      - 3001:3001

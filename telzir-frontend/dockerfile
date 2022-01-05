@@ -1,0 +1,7 @@
+
+FROM node:14-alpine as frontendTelzir
+WORKDIR /telzir-frontend
+COPY . .
+EXPOSE 3001
+CMD ["npm", "install"]
+ENTRYPOINT ["npm", "start"], [ "npm", "test" ]

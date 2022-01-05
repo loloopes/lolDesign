@@ -14,6 +14,7 @@ O FrontEnd, que vai rodar em `http://localhost:3000/calculator`, consiste de dua
     |   |_middleware        => diretorio onde se encontra o middleware que lida com possiveis falhas
     |   |_server            => diretorio onde se encontra o servidor
     |   |_service           => Camada responsavel pelo processamento de dados advindos do controller
+    |
     |___telzir-frontend
     |   |_public            => Diretorio onde se encontra o index.html, pagina do react
     |   |_src
@@ -50,7 +51,7 @@ Instale as dependencias tanto no diretorio front-end quanto back-end, para isso 
 cd telzir-backend
 npm install
 
-cd front-end
+cd telizr-frontend
 npm install
 ```
 Apos instaladas as dependencias voce devera rodar `npm start` tanto no diretorio back-end quanto front-end para que o aplicativo funcione na sua totalidade.
