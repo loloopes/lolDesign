@@ -17,8 +17,8 @@ export default function ResultsTable({ data: { withContract, withoutContract } }
           { withContract && withContract.map((callRes, index) => (
             <tr>
               <td role="cell">{index + 1}</td>
-              <td role="cell">{callRes}</td>
-              <td role="cell">{withoutContract[index]}</td>
+              <td role="cell">{`R$ ${callRes.toFixed(2)}`}</td>
+              <td role="cell">{`R$ ${withoutContract[index].toFixed(2)}`}</td>
             </tr>
           ))}
         </tbody>
