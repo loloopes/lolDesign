@@ -3,7 +3,8 @@ const prices = require('./prices');
 const callCalculatorWithContract = (data) => {
     const result = data.reduce((acc, cV) => {
         if (cV.contract === 'FaleMais30') {
-            return [...acc, ((cV.min - 30) * prices[cV.oriDest])]
+            // return ((cV.min - 30) * prices[cV.oriDest]) > 0 ? [...acc, ((cV.min - 30) * prices[cV.oriDest])] : 0;
+            return [...acc, ((cV.min - 30) * prices[cV.oriDest]) > 0 ? ((cV.min - 30) * prices[cV.oriDest]) : 0]
         }
         if (cV.contract === 'Falemais60') {
             return [...acc, ((cV.min - 60) * prices[cV.oriDest])]

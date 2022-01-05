@@ -13,6 +13,6 @@ export default function LabelInput({ entity, handleChange }) {
 }
 
 LabelInput.propTypes = {
-  wall: PropTypes.string,
-  dimension: PropTypes.string,
+  entity: PropTypes.string,
+  handleChange: PropTypes.func,
 }.isRequired;

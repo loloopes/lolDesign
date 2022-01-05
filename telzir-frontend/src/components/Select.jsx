@@ -20,4 +20,7 @@ export default function Select({
 
 Select.propTypes = {
   data: PropTypes.string,
+  tag: PropTypes.string,
+  handleChange: PropTypes.func,
+  id: PropTypes.string,
 }.isRequired;
