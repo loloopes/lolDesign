@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import CalculatorPage from '../pages/CalculatorPage';
@@ -41,13 +41,12 @@ describe('2- Test whether form updates table origin/destiny calls upon filling a
   });
 
   it('should populate origin destiny table after clicking on "Adicionar"', () => {
-    // const timeInput = screen.getByTestId('Tempo');
+    const timeInput = screen.getByTestId('Tempo');
     const originDestinySelect = screen.getByTestId('oriDes');
     const contractSelect = screen.getByTestId('contracts');
     const addButton = screen.getByTestId('add');
 
-    // userEvent.click(timeInput);
-    // userEvent.type(timeInput, '50');
+    fireEvent.change(timeInput, { target: { value: 50 }});
     userEvent.selectOptions(originDestinySelect, '011 para 017');
     userEvent.selectOptions(contractSelect, 'FaleMais60');
     userEvent.click(addButton);
@@ -55,7 +54,7 @@ describe('2- Test whether form updates table origin/destiny calls upon filling a
     const tableData = screen.getAllByRole('cell');
     expect(tableData[0].innerHTML).toBe('1');
     expect(tableData[1].innerHTML).toBe('011 para 017');
-    // expect(tableData[2].innerHTML).toBe(50);
+    expect(tableData[2].innerHTML).toBe('50');
     expect(tableData[3].innerHTML).toBe('FaleMais60');
   });
 });
